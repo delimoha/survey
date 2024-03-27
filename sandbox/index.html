@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Which anime is the best ?</div>
+        <div class="buttons">
+            <button class="button" id="noBtn">One Piece </button>
+            <button class="button" id="yesBtn">Dragon Ball</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            var btn = document.getElementById("noBtn");
+            btn.style.position = "absolute";
+            btn.style.left = Math.floor(Math.random() * 500) + "px";
+            btn.style.top = Math.floor(Math.random() * 500) + "px";
+        });
+
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            alert("Thanks bro");
+        });
+    </script>
+</body>
+</html>
